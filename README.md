@@ -27,11 +27,11 @@ Some datasets can be obtained from [Google Drive](https://drive.google.com/file/
 
 ### baseline: IN:seq OUT:seq
 TimeMKG and baselines are in the model. Depending on the seq2seq task, you can choose Long_term_forecasting, Short_term_forecasting and Classification.
-```bash
-python run.py
-```
+
 ### TimeMKG: IN:seq+prompt OUT:seq
 ```bash
 python run.py
 ```
 
+## MKG example:
+![ETT_MKG](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/Graphprompt.png)  
