@@ -1,11 +1,6 @@
 # TimeMKG: Knowledge-Infused Causal Reasoning for Multivariate Time Series Modeling
 The repo is the official implementation for the paper: [TimeMKG: Knowledge-Infused Causal Reasoning for Multivariate Time Series Modeling](https://arxiv.org/pdf/2508.09630).
 
-## Introduction
-Multivariate time series data has two main parts: variable semantics (like variable names and descriptions) and sampled numerical observations.
-
-![Introduction](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/Introduction.png)  
-
 ## Methods
 The overall structure of TimeMKG consists of four key modules: multivariate knowledge graph, dual-modality encoder, cross-modality attention, and inference module.
 ![TimeMKG](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/TimeMKG.png)  
