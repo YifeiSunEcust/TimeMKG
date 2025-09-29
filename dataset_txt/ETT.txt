@@ -1,0 +1,47 @@
+# Electricity Transformer Temperature (ETT) Knowledge Graph
+# Variables: HUFL, HULL, MUFL, MULL, LUFL, LULL, OT
+
+[Entities]
+# Power load features
+HUFL | description | High Voltage Phase Load
+HULL | description | High Voltage Line Load
+MUFL | description | Medium Voltage Phase Load
+MULL | description | Medium Voltage Line Load
+LUFL | description | Low Voltage Phase Load
+LULL | description | Low Voltage Line Load
+# Target variable
+OT | description | Oil Temperature
+
+[Relationships]
+# Intra-voltage level relations
+HUFL -> HULL | relation | Phase-line correlation within same voltage level
+MUFL -> MULL | relation | Phase-line correlation within same voltage level
+LUFL -> LULL | relation | Phase-line correlation within same voltage level
+
+# Cross-voltage level relations
+HUFL -> MUFL | influences | High voltage load changes may affect medium voltage system
+MUFL -> LUFL | influences | Medium voltage load changes may affect low voltage system
+
+# Temperature-related relations
+HUFL -> OT | potential_impact | High loads may cause temperature rise
+MUFL -> OT | potential_impact | Medium voltage load-temperature relationship
+LUFL -> OT | indirect_effect | Low voltage load's indirect impact
+HULL -> OT | correlates | Line load affects cooling efficiency
+MULL -> OT | correlates | Medium voltage line load impacts thermal balance
+
+# Temporal relations
+HUFL -> OT | time_lag | Load changes to temperature response delay
+MUFL -> OT | time_lag | Medium voltage system's delayed response
+
+[Rules]
+1. WHEN high voltage load (HUFL/HULL) exceeds threshold for >4h THEN oil temperature (OT) likely rises within 6h
+2. Sudden changes in medium/low voltage loads (MUFL/LUFL) may indicate temperature fluctuations within 2-4h
+3. Combined line loads (HULL/MULL/LULL) affect overall cooling efficiency
+4. Ambient temperature amplifies load's impact on OT during summer
+
+[Domain Knowledge]
+* Transformer temperature is function of: load + ambient temp + cooling efficiency
+* High voltage loads typically contribute more to temperature rise
+* Line loads reflect total load, phase loads reflect imbalance
+* Thermal inertia causes cumulative time-delayed effects
+* Historical load patterns better predict OT than instantaneous values
