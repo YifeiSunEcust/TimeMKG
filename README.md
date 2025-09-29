@@ -9,3 +9,5 @@ Multivariate time series data has two main parts: variable semantics (like varia
 ## Methods
 The overall structure of TimeMKG consists of four key modules: multivariate knowledge graph, dual-modality encoder, cross-modality attention, and inference module.
 ![TimeMKG](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/TimeMKG.png)  
+
+## Usage
