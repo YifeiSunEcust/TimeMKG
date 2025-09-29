@@ -11,3 +11,7 @@ The overall structure of TimeMKG consists of four key modules: multivariate know
 ![TimeMKG](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/TimeMKG.png)  
 
 ## Usage
+Use ‘MKG_generate.py’ to build the Multivariate Knowledge Graph and generate prompt. 
+Prompt example:
+"HUFL:High voltage load changes may affect medium voltage system."
+
