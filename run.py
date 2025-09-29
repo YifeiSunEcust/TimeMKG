@@ -33,7 +33,7 @@ if __name__ == '__main__':
                         help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
     parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
     parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
-    parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
+    parser.add_argument('--prompt_path', type=str, default='./prompts/', help='location of dataset prompt')
 
     # forecasting task
     parser.add_argument('--seq_len', type=int, default=96, help='input sequence length')
