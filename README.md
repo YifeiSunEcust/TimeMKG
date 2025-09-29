@@ -5,3 +5,7 @@ The repo is the official implementation for the paper: TimeMKG: Knowledge-Infuse
 Multivariate time series data has two main parts: variable semantics (like variable names and descriptions) and sampled numerical observations, but traditional time series models treat variables as anonymous statistical signals and ignore the useful domain knowledge in those textual descriptors—knowledge that’s important for strong, interpretable models. To fix this, we present TimeMKG, a multimodal causal reasoning framework that moves time series modeling from low-level signal processing to knowledge-informed inference: it uses large language models to understand variable semantics, builds structured Multivariate Knowledge Graphs to capture relationships between variables.
 
 ![Introduction](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/Introduction.png)  
+
+## Methods
+The overall structure of TimeMKG consists of four key modules: multivariate knowledge graph, dual-modality encoder, cross-modality attention, and inference module.
+![TimeMKG](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/TimeMKG.png)  
