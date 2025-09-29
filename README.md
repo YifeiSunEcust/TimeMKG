@@ -66,7 +66,7 @@ python run.py
 ```
 We provide a more detailed and complete command description for training and testing the model:
 An example config on `ETTh1` as custom dataset.
-# basic config
+### basic config
 ```python
     # basic config
     parser.add_argument('--task_name', type=str, default='long_term_forecast')
@@ -78,7 +78,7 @@ An example config on `ETTh1` as custom dataset.
     parser.add_argument('--data_path', type=str, default='', help='data file')
     parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
     parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
-    parser.add_argument('--prompt_path', type=str, default='./prompt/ETT_prompts')
+    parser.add_argument('--prompt_path', type=str, default='./prompts/ETT_prompt.txt')
 
     # forecasting task
     parser.add_argument('--seq_len', type=int, default=96, help='input sequence length')
@@ -99,6 +99,12 @@ An example config on `ETTh1` as custom dataset.
     parser.add_argument('--activation', type=str, default='gelu', help='activation')
     parser.add_argument('--max_len', type=int, default=30, help='max length of CPEncoder')
 ```
-
 ## MKG example:
 ![ETT_MKG](https://github.com/YifeiSunEcust/TimeMKG/blob/main/fig/Graphprompt.png)  
+## Acknowledgement:
+We appreciate the following GitHub repos a lot for their valuable code and efforts.
+- Informer(https://github.com/zhouhaoyi/Informer2020)
+- iTransformer (https://github.com/thuml/iTransformer)
+- Time-Series-Library (https://github.com/thuml/Time-Series-Library)
+
+
